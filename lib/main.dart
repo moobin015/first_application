@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'appbar/buildAppBar.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -36,8 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Column buildHomeScreenBody() => Column(
         children: [
           Center(
-            child: Text('Count your Number Of dart Project'),
-          )
+            child: Text(
+              'Count your Number Of dart Project',
+            ),
+          ),
         ],
       );
 }
