@@ -1,47 +1,49 @@
 import 'package:flutter/material.dart';
 
-import 'appbar/buildAppBar.dart';
-
 void main() {
-  runApp(
-    MyApp(),
-  );
+  runApp(Myapp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Myapp extends StatelessWidget {
+  const Myapp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home: Home(),
     );
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Home> createState() => _HomeState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
-      body: buildHomeScreenBody(),
-    );
-  }
-
-  Column buildHomeScreenBody() => Column(
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+        title: const Text('First Application'),
+      ),
+      body: Column(
         children: [
-          Center(
-            child: Text(
-              'Count your Number Of dart Project',
-            ),
+          Container(
+            height: 100,
+            width: 140,
+            color: const Color.fromARGB(255, 16, 199, 122),
+          ),
+          Container(
+            width: 140,
+            height: 100,
+            color: const Color.fromARGB(255, 150, 137, 98),
           ),
         ],
-      );
+      ),
+    );
+  }
 }
